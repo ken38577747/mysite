@@ -5,4 +5,4 @@ from django.http import HttpResponse
 # Create your views here.
 
 def login(request):
-    return HttpResponse('this is frist text!')
+    return HttpResponse('this is frist    text!')
