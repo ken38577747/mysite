@@ -1,8 +1,10 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-
+from .models import JobOrder
 
 # Create your views here.
 
 def login(request):
-    return HttpResponse('this is frist    text!')
+    context = {
+        'result': JobOrder.objects.get(isbn='451800')
+    }
+    return render(request, 'index.html',context)
